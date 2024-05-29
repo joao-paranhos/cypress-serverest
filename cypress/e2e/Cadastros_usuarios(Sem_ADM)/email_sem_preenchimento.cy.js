@@ -1,16 +1,24 @@
 describe('Login sem preenchimento do email (sem adicionar como ADM)', () => {
 
+
+    const ListaSeletores = {
+
+        PaginaCadastroButton: '[data-testid="cadastrar"]',
+        nomeSeletor: '[data-testid="nome"]',
+        senhaSeletor: '[data-testid="password"]',
+        cadastroButton: '[data-testid="cadastrar"]'}
+
     beforeEach(() => {
         cy.visit('https://front.serverest.dev/login')
     });
     it('Iremos realizar o processo de login, preenchendo nome e senha mas deixando o email em branco para depois tentar se cadastrar no site', () => {
 
-        cy.get('[data-testid="cadastrar"]').click()
+        cy.get(ListaSeletores.PaginaCadastroButton).click()
         cy.location('pathname').should('equal','/cadastrarusuarios')
         cy.contains('Cadastro').should('be.visible')
-        cy.get('[data-testid="nome"]').type('João Aurélio da Silva Paranhos')
-        cy.get('[data-testid="password"]').type('Joaoaurelio10@')
-        cy.get('[data-testid="cadastrar"]').click()
+        cy.get(ListaSeletores.nomeSeletor).type('João Aurélio da Silva Paranhos')
+        cy.get(ListaSeletores.senhaSeletor).type('Joaoaurelio10@')
+        cy.get(ListaSeletores.cadastroButton).click()
         cy.contains('Email é obrigatório').should('be.visible')
     });  
         
