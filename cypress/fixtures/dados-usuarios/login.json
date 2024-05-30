@@ -1,0 +1,36 @@
+{
+    "login_sucesso":
+        {"nome": "João Aurélio da Silva Paranhos",
+        "email": "joaoaurelio091@gmail.com",
+        "senha":"Joaoaurelio10@"},
+
+     "Email_Existente":
+
+     {"nome":"João Aurélio da Silva Paranhos",
+        "email":"joaoaurelio091@gmail.com",
+        "senha":"Joaoaurelio10@" },
+
+      "Email_invalido":
+        {"nome":"João Aurélio da Silva Paranhos",
+        "email":"joaoaurelio091gmail.com",
+        "senha": "Joaoaurelio10@"},
+
+       "Email_Sem_Preenchimento":
+        {"nome": "João Aurélio da Silva Paranhos",
+            "senha":"Joaoaurelio10@"},
+
+        "Nome_com_1caractere":
+            {"nome":"J",
+            "email":"joaoaurelio091@gmail.com",
+            "senha":"Joaoaurelio10@"},
+
+         "Nome_Sem_Preenchimento":
+            {"email":"joaoaurelio091@gmail.com",
+             "senha":"Joaoaurelio10@"},
+
+        "Senha_Sem_Preenchimento":
+            {"nome":"João Aurélio da Silva Paranhos",
+             "email":"joaoaurelio091@gmail.com"}
+
+
+}

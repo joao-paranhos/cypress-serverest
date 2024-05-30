@@ -1,3 +1,4 @@
+import usuarios from '/cypress/fixtures/dados-usuarios/login.json'
 describe('Login com usando somente 1 caractere no nome (sem adicionar como ADM)', () => {
 
 
@@ -17,9 +18,9 @@ describe('Login com usando somente 1 caractere no nome (sem adicionar como ADM)'
     cy.get(ListaSeletores.paginaCadastroButton).click()
     cy.location('pathname').should('equal','/cadastrarusuarios')
     cy.contains('Cadastro').should('be.visible')
-    cy.get(ListaSeletores.nomeSeletor).type('J')
-    cy.get(ListaSeletores.emailseletor).type('joaoaurelio0911@gmail.com')
-    cy.get(ListaSeletores.senhaSeletor).type('Joaoaurelio10@')
+    cy.get(ListaSeletores.nomeSeletor).type(usuarios.Nome_com_1caractere.nome)
+    cy.get(ListaSeletores.emailseletor).type(usuarios.Nome_com_1caractere.email)
+    cy.get(ListaSeletores.senhaSeletor).type(usuarios.Nome_com_1caractere.senha)
     cy.get(ListaSeletores.cadastroButton).click()
     });
 });

@@ -1,3 +1,4 @@
+import usuarios from '/cypress/fixtures/dados-usuarios/login.json'
 describe('Login sem preenchimento do email (sem adicionar como ADM)', () => {
 
 
@@ -16,8 +17,8 @@ describe('Login sem preenchimento do email (sem adicionar como ADM)', () => {
         cy.get(ListaSeletores.PaginaCadastroButton).click()
         cy.location('pathname').should('equal','/cadastrarusuarios')
         cy.contains('Cadastro').should('be.visible')
-        cy.get(ListaSeletores.nomeSeletor).type('João Aurélio da Silva Paranhos')
-        cy.get(ListaSeletores.senhaSeletor).type('Joaoaurelio10@')
+        cy.get(ListaSeletores.nomeSeletor).type(usuarios.Email_Sem_Preenchimento.nome)
+        cy.get(ListaSeletores.senhaSeletor).type(usuarios.Email_Sem_Preenchimento.senha)
         cy.get(ListaSeletores.cadastroButton).click()
         cy.contains('Email é obrigatório').should('be.visible')
     });  

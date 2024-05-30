@@ -1,3 +1,4 @@
+import usuarios from '/cypress/fixtures/dados-usuarios/login.json'
 describe('Email invalido (sem ADM)', () => {
 
     const ListaSeletores = {
@@ -15,9 +16,9 @@ describe('Email invalido (sem ADM)', () => {
         cy.get(ListaSeletores.paginaCadastroButton).click()
         cy.location('pathname').should('equal','/cadastrarusuarios')
         cy.contains('Cadastro').should('be.visible')
-        cy.get(ListaSeletores.nomeSeletor).type('João Aurélio da Silva Paranhos')
-        cy.get(ListaSeletores.emailSeletor).type('joaoaurelio091gmail.com')
-        cy.get(ListaSeletores.senhaSeletor).type('Joaoaurelio10@')
+        cy.get(ListaSeletores.nomeSeletor).type(usuarios.Email_invalido.nome)
+        cy.get(ListaSeletores.emailSeletor).type(usuarios.Email_invalido.email)
+        cy.get(ListaSeletores.senhaSeletor).type(usuarios.Email_invalido.senha)
         cy.get(ListaSeletores.cadastroButton).click()
     });
 });

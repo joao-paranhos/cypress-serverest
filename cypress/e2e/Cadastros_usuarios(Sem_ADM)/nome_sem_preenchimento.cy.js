@@ -1,3 +1,4 @@
+import usuarios from '/cypress/fixtures/dados-usuarios/login.json';
 describe('Login com o nome em branco (sem adicionar como ADM)', () => {
 
 
@@ -17,8 +18,8 @@ describe('Login com o nome em branco (sem adicionar como ADM)', () => {
         cy.get(ListaSeletores.Paginacadastrobutton).click()
         cy.location('pathname').should('equal','/cadastrarusuarios')
         cy.contains('Cadastro').should('be.visible')
-        cy.get(ListaSeletores.emailSeletor).type('joaoaurelio091@gmail.com');
-        cy.get(ListaSeletores.senhaSeletor).type('Joaoaurelio10@');
+        cy.get(ListaSeletores.emailSeletor).type(usuarios.Nome_Sem_Preenchimento.email);
+        cy.get(ListaSeletores.senhaSeletor).type(usuarios.Nome_Sem_Preenchimento.email);
         cy.get(ListaSeletores.cadastroButton).click();
         cy.contains('Nome é obrigatório').should('be.visible')
         
