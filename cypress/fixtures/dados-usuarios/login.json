@@ -1,7 +1,7 @@
 {
     "login_sucesso":
         {"nome": "João Aurélio da Silva Paranhos",
-        "email": "joaoaurelio091@gmail.com",
+        "email": "joaoparanhosfs@gmail.com",
         "senha":"Joaoaurelio10@"},
 
      "Email_Existente":
@@ -21,7 +21,7 @@
 
         "Nome_com_1caractere":
             {"nome":"J",
-            "email":"joaoaurelio091@gmail.com",
+            "email":"joaoaurelio09361@gmail.com",
             "senha":"Joaoaurelio10@"},
 
          "Nome_Sem_Preenchimento":
